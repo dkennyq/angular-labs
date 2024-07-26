@@ -1,0 +1,19 @@
+@if(IsLoggedIn){
+  <h1>Welcome {{ name }}</h1>
+  <img
+  (click)="greet()"
+  alt="photo"
+  src="https://github.com/kennyquevedo.png" />
+  <button (click)="logout()">Logout</button>
+} @else {
+  <h1>Please log in.</h1>
+  <button (click)="login()">Login</button>
+}
+
+<app-game
+  (addFavoriteGameEvent)="getFavoriteGame($event)"
+  username="{{ name }}" />
+
+@if(favoriteGame != ''){
+  <h2>Your favorite game is {{ favoriteGame }}</h2>
+}
