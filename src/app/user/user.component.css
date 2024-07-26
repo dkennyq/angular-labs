@@ -3,3 +3,10 @@ img {
   height: 65px;
   border-radius: 50%;
 }
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
